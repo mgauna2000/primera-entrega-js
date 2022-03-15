@@ -20,7 +20,7 @@ let productos = [
   {
     nombre: "Jujutsu Kaisen",
     precio: 3500,
-    categoria: "figuraAccion",
+    categoria: "figura de accion",
     stock: 5,
   },
   {
@@ -37,9 +37,14 @@ let productos = [
   },
 ];
 
-const elegirProducto = (productos) => {
-
-}
+const mostrarProductos = (productos) => {
+  for (const producto of productos) {
+    alert(
+      `el producto es: ${producto.nombre} y su precio es: ${producto.precio}, categoria del producto: ${producto.categoria}`
+    );
+  }
+};
+mostrarProductos(productos);
 
 const agregarProducto = (productos) => {
   let nombreProducto = prompt("Nombre del producto");
@@ -47,20 +52,26 @@ const agregarProducto = (productos) => {
   let categoriaProducto = prompt("Categoria del producto");
   let stockProducto = parseFloat(prompt("Stock del producto"));
 
-  productos.push({nombre: nombreProducto, precio: precioProducto, categoria: categoriaProducto, stock: stockProducto});
-  console.table(productos)
+  productos.push({
+    nombre: nombreProducto,
+    precio: precioProducto,
+    categoria: categoriaProducto,
+    stock: stockProducto,
+  });
+  console.table(productos);
 };
 // agregarProducto(productos);
 
 const filtrarProducto = (productos) => {
-    let precioMinimo = parseFloat(prompt("Escribe el precio minimo que desea"));
-    let precioMaximo = parseFloat(prompt("Escribe el precio maximo que desea"));
+  let precioMinimo = parseFloat(prompt("Escribe el precio minimo que desea"));
+  let precioMaximo = parseFloat(prompt("Escribe el precio maximo que desea"));
 
-    const filtrar = productos.filter((p) => p.precio>=precioMinimo && p.precio<=precioMaximo);
-console.log(filtrar);
-}
-filtrarProducto(productos);
-
+  const filtrar = productos.filter(
+    (p) => p.precio >= precioMinimo && p.precio <= precioMaximo
+  );
+  console.log(filtrar);
+};
+// filtrarProducto(productos);
 
 // const resultado2 = productos.some((p) => )
 // const manga = productos.map((p) =>{
