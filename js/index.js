@@ -67,7 +67,7 @@ const filtrarProducto = (productos) => {
   let precioMaximo = parseFloat(prompt("Escribe el precio maximo que desea"));
 
   const filtrar = productos.filter(
-    (p) => p.precio >= precioMinimo && p.precio <= precioMaximo
+    (productos) => productos.precio >= precioMinimo && productos.precio <= precioMaximo
   );
   console.log(filtrar);
 };
@@ -93,4 +93,4 @@ const buscarPorCategorias = (productos) => {
 })
 console.log(productoCategoria);
 }
-buscarPorCategorias(productos)
+// buscarPorCategorias(productos)
