@@ -37,6 +37,10 @@ let productos = [
   },
 ];
 
+const elegirProducto = (productos) => {
+
+}
+
 const agregarProducto = (productos) => {
   let nombreProducto = prompt("Nombre del producto");
   let precioProducto = parseFloat(prompt("Precio del producto"));
@@ -46,12 +50,17 @@ const agregarProducto = (productos) => {
   productos.push({nombre: nombreProducto, precio: precioProducto, categoria: categoriaProducto, stock: stockProducto});
   console.table(productos)
 };
-agregarProducto(productos);
+// agregarProducto(productos);
 
+const filtrarProducto = (productos) => {
+    let precioMinimo = parseFloat(prompt("Escribe el precio minimo que desea"));
+    let precioMaximo = parseFloat(prompt("Escribe el precio maximo que desea"));
 
+    const filtrar = productos.filter((p) => p.precio>=precioMinimo && p.precio<=precioMaximo);
+console.log(filtrar);
+}
+filtrarProducto(productos);
 
-// const resultado = productos.filter((p) => p.precio>=20 && p.precio<=90)
-// console.log(resultado)
 
 // const resultado2 = productos.some((p) => )
 // const manga = productos.map((p) =>{
