@@ -44,7 +44,7 @@ const mostrarProductos = (productos) => {
     );
   }
 };
-mostrarProductos(productos);
+// mostrarProductos(productos);
 
 const agregarProducto = (productos) => {
   let nombreProducto = prompt("Nombre del producto");
@@ -72,8 +72,6 @@ const filtrarProducto = (productos) => {
   console.log(filtrar);
 };
 // filtrarProducto(productos);
-
-// const resultado2 = productos.some((p) => )
 
 const buscarPorCategorias = (productos) => {
 
