@@ -74,16 +74,47 @@ const filtrarProducto = (productos) => {
 // filtrarProducto(productos);
 
 // const resultado2 = productos.some((p) => )
-// const manga = productos.map((p) =>{
-//     if(p.categoria == "manga"){
-//         return p.nombre;
-//     }else{
-//         return null;
-//     }
-// })
+
+const buscarPorCategorias = (productos) => {
+
+  let elijaCategoria = prompt("Elija una de las categorias: manga, cuadro o figura de accion!")
+
+  const productoCategoria = productos.map((productos) =>{
+    if(elijaCategoria == "manga" && productos.categoria == "manga"){
+        return productos.nombre;
+    }else if(elijaCategoria == "cuadro" && productos.categoria == "cuadro"){
+      return productos.nombre;
+    }else if(elijaCategoria == "figura de accion" && productos.categoria == "figura de accion"){
+      return productos.nombre;
+    }
+    else{
+      return null;
+    }
+})
+console.log(productoCategoria);
+}
+buscarPorCategorias(productos)
 
 // const nombreProductos = productos.map((p) => {
 //     return p.nombre;
 // })
 
 // let stock = productos.reduce((cantidad, p) => cantidad + p.stock, 0);
+// const buscarPorCategorias = (productos) => {
+
+//   let elijaCategoria = prompt("Elija una de las catgorias: manga, cuadro o figura de accion!")
+
+//   const productoCategoria = productos.map((productos) =>{
+//     if(productos.categoria == "manga"){
+//         return productos.nombre;
+//     }else if(productos.categoria == "cuadro"){
+//       return productos.nombre;
+//     }else if(productos.categoria == "figura de accion"){
+//       return productos.nombre;
+//     }else{
+//       return null;
+//     }
+// })
+// console.log(productoCategoria);
+// }
+// buscarPorCategorias(productos)
